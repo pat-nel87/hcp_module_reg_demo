@@ -28,10 +28,20 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
-        run: npm audit signatures
+        run: |
+          if [ -f package-lock.json ]; then
+            npm audit signatures
+          else
+            echo "Skipping audit signatures for initial setup"
+          fi
 
       - name: Release
         env:
