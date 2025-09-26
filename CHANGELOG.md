@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/pat-nel87/hcp_module_reg_demo/compare/v1.0.0...v1.0.1) (2025-09-26)
+
+
+### Bug Fixes
+
+* remove duplicate output definitions from variables.tf ([f1aa3a5](https://github.com/pat-nel87/hcp_module_reg_demo/commit/f1aa3a52ef53c3fd2e9c67931d6d147e2c05ece0))
+
 # 1.0.0 (2025-09-25)
 
 
